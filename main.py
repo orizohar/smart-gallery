@@ -1,4 +1,3 @@
-########### Python 2.7 #############
 import httplib, urllib, base64
 from config import params
 
@@ -10,7 +9,7 @@ headers = {
 
 params = urllib.urlencode({
     # Request parameters
-    'visualFeatures': 'Categories',
+    'visualFeatures': 'Categories,Tags,Description',
 })
 
 body = {"url" : "https://upload.wikimedia.org/wikipedia/commons/5/58/Sunset_2007-1.jpg"}
@@ -25,4 +24,3 @@ try:
 except Exception as e:
     print(e.message)
 
-####################################
